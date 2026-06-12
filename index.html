@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحميل تطبيق HomeCare DZ</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A56DB',
+                        secondary: '#10B981',
+                        dark: '#1E293B'
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body { font-family: 'Tajawal', sans-serif; }
+        .hero-pattern {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#1A56DB 0.5px, transparent 0.5px), radial-gradient(#1A56DB 0.5px, #f8fafc 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.8;
+        }
+        .blob {
+            position: absolute;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.6;
+        }
+        .blob-1 { top: -10%; right: -10%; width: 400px; height: 400px; background: #bfdbfe; border-radius: 50%; }
+        .blob-2 { bottom: -10%; left: -10%; width: 500px; height: 500px; background: #bbf7d0; border-radius: 50%; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 overflow-x-hidden relative min-h-screen flex flex-col">
+
+    <!-- Background Blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <!-- Header -->
+    <header class="container mx-auto px-6 py-6 flex justify-between items-center relative z-10">
+        <div class="flex items-center gap-3">
+            <div class="bg-primary text-white p-2 rounded-xl shadow-lg shadow-primary/30">
+                <i data-lucide="heart-pulse"></i>
+            </div>
+            <span class="text-2xl font-bold text-dark tracking-tight">HomeCare<span class="text-primary">DZ</span></span>
+        </div>
+        <a href="#download" class="hidden md:flex items-center gap-2 bg-slate-900 text-white px-6 py-2.5 rounded-full font-bold hover:bg-primary transition-all shadow-xl hover:-translate-y-1">
+            <i data-lucide="download" class="w-5 h-5"></i>
+            حمل التطبيق
+        </a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center relative z-10">
+        <div class="container mx-auto px-6 py-12 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Text Content -->
+            <div class="space-y-8 text-center lg:text-right">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-primary font-bold text-sm">
+                    <span class="relative flex h-3 w-3">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                    </span>
+                    الإصدار الجديد متوفر الآن!
+                </div>
+                
+                <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight text-dark">
+                    الرعاية الصحية، <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">تبدأ من منزلك.</span>
+                </h1>
+                
+                <p class="text-lg lg:text-xl text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    تطبيقك الأول في الجزائر لطلب خدمات التمريض المنزلي، الأطباء، والصيادلة. احصل على الرعاية التي تستحقها وأنت في راحة بيتك.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4" id="download">
+                    <a href="https://expo.dev/artifacts/eas/u_XeI6mf6Jpr-kLDRtAMZDxK8SsMLRFQgalBABOD2_o.apk" 
+                       class="flex items-center justify-center gap-3 bg-primary text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-2xl shadow-primary/40 hover:-translate-y-1 group">
+                        <i data-lucide="smartphone" class="w-6 h-6 group-hover:animate-bounce"></i>
+                        تحميل نسخة Android (APK)
+                    </a>
+                </div>
+
+                <!-- Features -->
+                <div class="grid grid-cols-3 gap-6 pt-12 border-t border-slate-200 mt-8">
+                    <div class="text-center">
+                        <div class="bg-blue-100 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 text-primary">
+                            <i data-lucide="stethoscope"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800">أطباء وتمريض</h3>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-emerald-100 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 text-secondary">
+                            <i data-lucide="pill"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800">صيدليات</h3>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-amber-100 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 text-amber-600">
+                            <i data-lucide="book-open"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800">محتوى طبي</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image/Mockup -->
+            <div class="relative mx-auto w-full max-w-md hidden lg:block">
+                <!-- Phone Mockup Container -->
+                <div class="relative bg-dark rounded-[3rem] p-4 shadow-2xl shadow-primary/20 border-8 border-slate-800 aspect-[1/2] flex items-center justify-center overflow-hidden">
+                    <div class="absolute top-0 inset-x-0 h-6 bg-slate-800 rounded-b-3xl w-1/2 mx-auto z-20"></div>
+                    
+                    <!-- Decorative Mockup Content -->
+                    <div class="w-full h-full bg-slate-50 rounded-[2rem] overflow-hidden flex flex-col relative z-10">
+                        <div class="bg-primary p-6 pt-10 text-white rounded-b-3xl shadow-md">
+                            <div class="flex justify-between items-center mb-6">
+                                <div>
+                                    <p class="text-sm opacity-80">أهلاً بك في</p>
+                                    <h2 class="text-xl font-bold">HomeCare DZ</h2>
+                                </div>
+                                <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                                    <i data-lucide="user" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div class="bg-white/10 rounded-xl p-4 flex items-center gap-4">
+                                <i data-lucide="search" class="w-5 h-5 opacity-70"></i>
+                                <span class="text-sm opacity-90">ابحث عن خدمة طبية...</span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-6 space-y-6 flex-grow bg-slate-50">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 text-center">
+                                    <div class="bg-blue-50 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-2 text-primary">
+                                        <i data-lucide="activity" class="w-5 h-5"></i>
+                                    </div>
+                                    <span class="text-xs font-bold text-slate-700">ممرض منزلي</span>
+                                </div>
+                                <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 text-center">
+                                    <div class="bg-emerald-50 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-2 text-secondary">
+                                        <i data-lucide="pill" class="w-5 h-5"></i>
+                                    </div>
+                                    <span class="text-xs font-bold text-slate-700">صيدلية</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-bold text-slate-800 mb-3 text-sm">أطباء متاحون الآن</h3>
+                                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-500">
+                                        <i data-lucide="user" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-800">د. أحمد</p>
+                                        <p class="text-xs text-slate-500">طبيب عام</p>
+                                    </div>
+                                    <div class="mr-auto w-2 h-2 bg-green-500 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Floating Elements -->
+                <div class="absolute -left-8 top-1/4 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 animate-bounce" style="animation-duration: 3s;">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-emerald-100 text-emerald-600 p-2 rounded-lg">
+                            <i data-lucide="check-circle" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500">التقييم</p>
+                            <p class="font-bold text-slate-800">4.9/5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 py-8 relative z-10 mt-auto bg-white">
+        <div class="container mx-auto px-6 text-center text-slate-500 text-sm">
+            &copy; 2026 HomeCare DZ. جميع الحقوق محفوظة.
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
